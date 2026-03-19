@@ -1,11 +1,6 @@
 import { useState, useMemo } from "react";
-import { useData } from "./dataLoader";
 import { LayoutDashboard, Grid, DollarSign, CheckSquare, Users, Briefcase, TrendingUp, Wallet, BarChart3, PlayCircle, Package, ArrowRight, CheckCircle2, AlertCircle, Lightbulb, Flame, X, BarChart2, Zap, Settings, ChevronUp, ChevronDown, UploadCloud, Search, FileText } from "lucide-react";
 import { ResponsiveContainer, ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LabelList } from "recharts";
-import masterRaw from "../data/product_master.json";
-import infoRaw from "../data/product_info.json";
-import salesRaw from "../data/sales_data.json";
-import invRaw from "../data/inventory_data.json";
 
 /* ═══ DATA PROCESSING ═══ */
 const TD=new Date("2026-03-12");
@@ -23,95 +18,6 @@ const sm=d=>{if(!d)return{t:"-",c:"text-slate-400",n:false};const l=new Date(d),
 const CT=({active,payload,label})=>active&&payload?.length?<div className="bg-white border border-slate-200 p-3 rounded-lg shadow-xl text-xs z-50"><p className="font-bold text-slate-800 mb-2 border-b pb-1">{label}</p>{payload.map((e,i)=><div key={i} className="flex items-center gap-2 mb-1"><div className="w-2 h-2 rounded-full" style={{backgroundColor:e.color}}/><span className="text-slate-500 min-w-[50px]">{e.name}:</span><span className="font-bold text-slate-700">{typeof e.value==="number"?e.value.toLocaleString():e.value}</span></div>)}</div>:null;
 
 /* Build product list from real data */
-const buildProducts = () => {
-  const products = [];
-  const allNames = new Set([...Object.keys(infoRaw), ...Object.keys(salesRaw)]);
-  
-  allNames.forEach(pname => {
-    const inf = infoRaw[pname];
-    if (!inf) return; // skip products without info
-    const sd = salesRaw[pname] || {};
-    const inv = invRaw[pname] || {stock:0,reserved:0,hold:0,available:0,optimal:0};
-    
-    // Build monthly data array (all months found)
-    const months = Object.keys(sd).sort();
-    const md = months.map(ym => {
-      const d = sd[ym] || {};
-      return {
-        month: ym,
-        sales: (d.sA||0) + (d.hA||0),
-        gpd: (d.sG||0) + (d.hG||0),
-        salesSales: d.sA||0,
-        salesShop: d.hA||0,
-        gpdSales: d.sG||0,
-        gpdShop: d.hG||0,
-        orders: (d.sO||0) + (d.hO||0),
-        ordersSales: d.sO||0,
-        ordersShop: d.hO||0,
-        qty: (d.sQ||0) + (d.hQ||0),
-        qtySales: d.sQ||0,
-        qtyShop: d.hQ||0,
-        items: (d.sI||0) + (d.hI||0),
-        itemsSales: d.sI||0,
-        itemsShop: d.hI||0
-      };
-    });
-    
-    // Compute aggregates
-    const sumRange = (startYM, endYM) => {
-      const r = {amt:0,gpd:0,qty:0,ord:0};
-      md.forEach(m => { if(m.month>=startYM && m.month<=endYM) { r.amt+=m.sales; r.gpd+=m.gpd; r.qty+=m.qty; r.ord+=m.orders; }});
-      return r;
-    };
-    
-    const ytdStart = `${CY}-01`, ytdEnd = `${CY}-${String(CM).padStart(2,"0")}`;
-    const pyStart = `${CY-1}-01`, pyEnd = `${CY-1}-${String(CM).padStart(2,"0")}`;
-    const curYM = `${CY}-${String(CM).padStart(2,"0")}`;
-    const prevYearYM = `${CY-1}-${String(CM).padStart(2,"0")}`;
-    const prevMonthYM = CM>1 ? `${CY}-${String(CM-1).padStart(2,"0")}` : `${CY-1}-12`;
-    
-    const ytd26 = sumRange(ytdStart, ytdEnd);
-    const ytd25 = sumRange(pyStart, pyEnd);
-    const curD = sd[curYM] || {};
-    const pvD = sd[prevYearYM] || {};
-    const pmD = sd[prevMonthYM] || {};
-    
-    const curAmt = (curD.sA||0)+(curD.hA||0);
-    const curGpd = (curD.sG||0)+(curD.hG||0);
-    const pvAmt = (pvD.sA||0)+(pvD.hA||0);
-    const pvGpd = (pvD.sG||0)+(pvD.hG||0);
-    const pmAmt = (pmD.sA||0)+(pmD.hA||0);
-    const pmGpd = (pmD.sG||0)+(pmD.hG||0);
-    
-    products.push({
-      id: `p-${products.length}`,
-      n: pname,
-      g: inf.group,
-      b: nb(inf.board),
-      t: String(inf.annualTarget),
-      ld: inf.launchDate,
-      md,
-      stock: inv.available,
-      stockDetail: inv,
-      r: {
-        yg: +(ytd26.gpd/1e6).toFixed(1),
-        yr: +(ytd26.amt/1e6).toFixed(1),
-        pyg: +(ytd25.gpd/1e6).toFixed(1),
-        pyr: +(ytd25.amt/1e6).toFixed(1),
-        cg: +(curGpd/1e6).toFixed(1),
-        cr: +(curAmt/1e6).toFixed(1),
-        pvg: +(pvGpd/1e6).toFixed(1),
-        pvr: +(pvAmt/1e6).toFixed(1),
-        pmg: +(pmGpd/1e6).toFixed(1),
-        pmr: +(pmAmt/1e6).toFixed(1)
-      }
-    });
-  });
-  
-  return products.sort((a,b) => b.r.yr - a.r.yr);
-};
-
-const SL = buildProducts();
 
 /* Matrix data - keep existing */
 const MC=[{k:"유치부",l:"유치부"},{k:"초등저",l:"초등저"},{k:"초등고",l:"초등고"},{k:"중등",l:"중등"},{k:"고등",l:"고등"},{k:"대학",l:"대학"}];
@@ -283,15 +189,13 @@ return(<div className="space-y-6 pb-10"><div><h2 className="text-2xl font-bold t
 </div>)}
 /* APP */
 export default function App(){const[tab,setTab]=useState(0);const[toast,setToast]=useState(null);
-const{loading,error,data}=useData();
+
 const show=m=>{setToast(m);setTimeout(()=>setToast(null),3000)};
 const hUp=(k,n,f)=>show(`${f}: ${n}건 업로드 완료!`);
-/* Use real data when loaded, fallback to hardcoded */
-const sd=data?.salesItems||SL;
-const ws=data?.workshops||WD;
-const inv=data?.inventoryByProduct||{};
-const pi=data?.productInfo||{};
+const sd=SL;
+const ws=WD;
 const P=[()=><T0 sd={sd} ws={ws} cr={C2R} cw={C2W} mk={MK}/>,()=><T1 pi={pi}/>,()=><T2 items={sd}/>,()=><T3 mk={MK}/>,()=><T4 ws={ws}/>,()=><T5 cr={C2R} cw={C2W}/>];
 const Pn=P[tab]||P[0];
-if(loading)return(<div className="flex h-screen bg-slate-50 items-center justify-center" style={{fontFamily:"system-ui,sans-serif"}}><div className="text-center"><div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mx-auto mb-4"/><h2 className="text-xl font-bold text-slate-800 mb-2">PRODDASH v2.0</h2><p className="text-sm text-slate-500">{error?"데이터 로딩 실패: "+error:"데이터를 가져오는 중..."}</p></div></div>);
+
+if(error)return(<div className="flex h-screen bg-slate-50 items-center justify-center" style={{fontFamily:"system-ui,sans-serif"}}><div className="text-center max-w-md"><div className="text-5xl mb-4">⚠️</div><h2 className="text-xl font-bold text-slate-800 mb-2">데이터 로딩 오류</h2><p className="text-sm text-red-500 mb-4">{error}</p><p className="text-xs text-slate-400">public/data/ 폴더에 파일이 있는지 확인하세요.</p><button onClick={()=>window.location.reload()} className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm">새로고침</button></div></div>);
 return(<div className="flex h-screen bg-slate-50 text-slate-800" style={{fontFamily:"system-ui,sans-serif"}}><Sb tab={tab} setTab={setTab} onUp={hUp}/><main className="flex-1 overflow-y-auto" style={{marginLeft:224}}><header className="bg-white border-b border-slate-200 px-8 py-4 sticky top-0 z-10 flex justify-between items-center shadow-sm"><div className="text-sm text-slate-400"><span className="mr-2">Home</span> / <span className="ml-2 font-medium text-indigo-600">Dashboard</span></div><div className="flex items-center space-x-4"><div className="text-xs text-slate-500">Last Update: <span className="font-bold text-slate-700">2026-03-12 13:39</span></div><div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-xs border border-indigo-200">JS</div></div></header><div className="p-8 max-w-7xl mx-auto"><Pn/></div>{toast&&<div className="fixed top-20 right-8 z-50 bg-slate-800 text-white px-4 py-3 rounded-lg shadow-2xl flex items-center"><CheckCircle2 className="w-5 h-5 text-green-400 mr-2"/><span className="text-sm font-medium">{toast}</span></div>}</main></div>)}
