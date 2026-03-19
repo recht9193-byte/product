@@ -1,1 +1,562 @@
-
+{
+  "코딩교육을 위한 마이크로비트 교재 전용 키트(Y/62M)": [
+    {
+      "name": "코딩교육을 위한 마이크로비트 교재 전용 키트",
+      "pcode": "P008564413"
+    },
+    {
+      "name": "코딩 교육을 위한 마이크로비트 교재 + 전용 키트 without microbit",
+      "pcode": "P008564414"
+    },
+    {
+      "name": "코딩 교육을 위한 마이크로비트 교재 + 전용 키트",
+      "pcode": "P013148927"
+    },
+    {
+      "name": "코딩 교육을 위한 마이크로비트 교재 전용 키트",
+      "pcode": "P013148929"
+    }
+  ],
+  "마이크로비트 지니어스 키트 (Y/155M)": [
+    {
+      "name": "마이크로비트 지니어스 키트",
+      "pcode": "P008341200"
+    },
+    {
+      "name": "Micro:bit Genius Kit (without microbit ,with book)",
+      "pcode": "P009590076"
+    },
+    {
+      "name": "Micro:bit Genius Kit (with microbit)",
+      "pcode": "P013148928"
+    },
+    {
+      "name": "Micro:bit Genius Kit (with microbit , book)",
+      "pcode": "P013148930"
+    }
+  ],
+  "모두의 마이크로비트 (Y/88M)": [
+    {
+      "name": "모두의 마이크로비트",
+      "pcode": "P011850140"
+    },
+    {
+      "name": "모두의 마이크로비트 (without microbit ,with book)",
+      "pcode": "P012114415"
+    },
+    {
+      "name": "모두의 마이크로비트 키트 (with micro:bit V2.2)",
+      "pcode": "P013148931"
+    },
+    {
+      "name": "모두의 마이크로비트 (with microbit V2.2 ,with book)",
+      "pcode": "P013148932"
+    }
+  ],
+  "micro:bit & 나두이노 홈 IoT 키트 (Y/9M)": [
+    {
+      "name": "micro:bit & 나두이노 홈 IoT 키트",
+      "pcode": "P013466538"
+    },
+    {
+      "name": "micro:bit & 나두이노 홈 IoT 키트 + 홈 IoT키트 교재",
+      "pcode": "P014201115"
+    }
+  ],
+  "파이썬과 마이크로비트로 배우는 실전 코딩 프로젝트 키트 (Y/15M)": [
+    {
+      "name": "파이썬과 마이크로비트로 배우는 실전 코딩 프로젝트 키트",
+      "pcode": "P015122669"
+    },
+    {
+      "name": "파이썬과 마이크로비트로 배우는 실전 코딩 프로젝트 키트 + 교재",
+      "pcode": "P015403608"
+    }
+  ],
+  "스마트 팜 키트 (Y/7M)": [
+    {
+      "name": "스마트 팜 키트",
+      "pcode": "P013471486"
+    }
+  ],
+  "신나는 AI 렌즈 스터디 키트 (Y/3M)": [
+    {
+      "name": "신나는 AI 렌즈 스터디 키트",
+      "pcode": "P012843591"
+    }
+  ],
+  "(신규)마이크로비트 올인원 키트(Y/10M)": [
+    {
+      "name": "(신규/출시완료)마이크로비트 올인원 키트",
+      "pcode": "P015960329"
+    },
+    {
+      "name": "마이크로비트 올인원 교재",
+      "pcode": "P015764639"
+    },
+    {
+      "name": "마이크로비트 올인원 프로젝트 키트 + 교재",
+      "pcode": "P016588503"
+    }
+  ],
+  "라즈베리파이 스킬업 키트 (Y/3M)": [
+    {
+      "name": "(완료)라즈베리파이 스킬업 키트",
+      "pcode": "P016304534"
+    }
+  ],
+  "아두이노 올인원키트 (Y/50M)": [
+    {
+      "name": "아두이노 올인원키트",
+      "pcode": "P011970963"
+    }
+  ],
+  "아두이노로 만드는 20가지 프로젝트 키트 (Y/15M)": [
+    {
+      "name": "아두이노로 만드는 20가지 프로젝트 키트",
+      "pcode": "P014844263"
+    },
+    {
+      "name": "아두이노로 만드는 20가지 프로젝트 키트 + 교재",
+      "pcode": "P015405470"
+    }
+  ],
+  "HELP! 전자공학으로 아두이노 실습 문제 해결하기 키트 (Y/3M)": [
+    {
+      "name": "HELP! 전자공학으로 아두이노 실습 문제 해결하기 키트",
+      "pcode": "P015841287"
+    },
+    {
+      "name": "전자공학으로 아두이노 정복하기 키트 + 교재",
+      "pcode": "P016025014"
+    }
+  ],
+  "아두이노 올인원 키트 V2(Y/3M)": [
+    {
+      "name": "(완료)아두이노 올인원 키트 2 (Elecrow)",
+      "pcode": "P016613722"
+    }
+  ],
+  "라즈베리파이 피코 스타터 키트 (Y/2M)": [
+    {
+      "name": "라즈베리파이 피코 스타터 키트",
+      "pcode": "P012834536"
+    },
+    {
+      "name": "Raspberry Pi Pico Starter Kit (with I-Pico RP2040)",
+      "pcode": "P013075795"
+    }
+  ],
+  "피코 올인원 키트 (Y/10M)": [
+    {
+      "name": "(완료)피코 올인원 키트 (Elecrow)",
+      "pcode": "P016613727"
+    }
+  ],
+  "피코 W IoT 키트 (Y/3M)": [
+    {
+      "name": "(완료)피코 W IoT 키트",
+      "pcode": "P016642482"
+    }
+  ],
+  "ESP32로 만드는 IoT월드 키트 with 아두이노 IDE2 (Y/11M)": [
+    {
+      "name": "ESP32로 만드는 IoT월드 키트 with 아두이노 IDE2",
+      "pcode": "P015257882"
+    },
+    {
+      "name": "ESP32로 만드는 IoT월드 with 아두이노 IDE2 키트 + 교재",
+      "pcode": "P015922935"
+    },
+    {
+      "name": "ESP32로 만드는 IoT월드 키트 with 아두이노 IDE2",
+      "pcode": "P015257882"
+    },
+    {
+      "name": "ESP32로 만드는 IoT월드 with 아두이노 IDE2 키트 + 교재",
+      "pcode": "P015922935"
+    }
+  ],
+  "ESP32 스타터 키트 (Y/6M)": [
+    {
+      "name": "(완료)ESP32 스타터 키트",
+      "pcode": "P016678566"
+    }
+  ],
+  "(단종예정)스마트 가로등 키트 (Y/2M)": [
+    {
+      "name": "스마트 가로등 키트",
+      "pcode": "P014950542"
+    }
+  ],
+  "스마트 홈 DIY MDF 패키지 (Y/1M)": [
+    {
+      "name": "스마트 홈 DIY MDF 패키지",
+      "pcode": "P015403095"
+    }
+  ],
+  "스페이스 코딩 키트 (Y/40M)": [
+    {
+      "name": "(완료)스페이스 코딩 키트",
+      "pcode": "P016414299"
+    }
+  ],
+  "스마트 그린 하우스 키트 (Y/10M)": [
+    {
+      "name": "(완료)스마트 그린 하우스 키트",
+      "pcode": "P016591701"
+    }
+  ],
+  "스마트홈 익스플로러 키트 (Y/7M)": [
+    {
+      "name": "(완료)스마트홈 익스플로러 키트",
+      "pcode": "P016792295"
+    }
+  ],
+  "(단종예정)아두이노 우노 DIY 스마트 쓰레기통 키트 (Y/1M)": [
+    {
+      "name": "아두이노 우노 DIY 스마트 쓰레기통 키트",
+      "pcode": "P015693488"
+    }
+  ],
+  "(단종예정)아두이노 DIY 스마트 화분 키트 (Y/1M)": [
+    {
+      "name": "아두이노 DIY 스마트 화분 키트",
+      "pcode": "P015437433"
+    }
+  ],
+  "ESP32 스마트 농업 키트 (Y/4M)": [
+    {
+      "name": "ESP32 스마트 농업 키트",
+      "pcode": "P016207533"
+    }
+  ],
+  "마퀸 (업데이트 V5) (Y/60M)": [
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148]",
+      "pcode": "P008605720"
+    },
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148] (with book) V2",
+      "pcode": "P012114177"
+    },
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148](with microbit)",
+      "pcode": "P013148933"
+    },
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148] (with microbit V2.2, book)",
+      "pcode": "P013148934"
+    },
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148] (with Huskylens,microbit V2.2, book)",
+      "pcode": "P013148935"
+    }
+  ],
+  "마퀸 플러스 (업데이트 V3) (Y/70M)": [
+    {
+      "name": "micro:Maqueen Plus V2 (18650 Battery) - an Advanced STEM Education Robot for micro:bit",
+      "pcode": "P014203534"
+    },
+    {
+      "name": "[MBT0021-EN-18650-3] micro:Maqueen Plus V2 (18650 Battery) with micro:Maqueen Mechanic",
+      "pcode": "P013148858"
+    },
+    {
+      "name": "[MBT0021-EN-18650-1] micro:Maqueen Plus V2 (18650 Battery) with HUSKYLENS",
+      "pcode": "P013148859"
+    },
+    {
+      "name": "micro:Maqueen Plus V2 (18650 Battery) with HUSKYLENS and micro:bit V2",
+      "pcode": "P013466529"
+    }
+  ],
+  "TPBot (Y/5M)": [
+    {
+      "name": "TPBot Car Kit ：Smart Car Robot Kit for micro:bit (without micro:bit board)",
+      "pcode": "P012014782"
+    }
+  ],
+  "링비트카 (Y/10M)": [
+    {
+      "name": "링비트카",
+      "pcode": "P013148940"
+    }
+  ],
+  "큐트봇 프로 (Y/5M)": [
+    {
+      "name": "큐트봇 프로",
+      "pcode": "P015410244"
+    }
+  ],
+  "코볼트 (Y/32M)": [
+    {
+      "name": "코볼트",
+      "pcode": "P016277998"
+    }
+  ],
+  "TPBot Edu (Y/M)": [
+    {
+      "name": "(신규)TPBot Edu",
+      "pcode": "P016873034"
+    }
+  ],
+  "라즈봇 V2 (Y/9M)": [
+    {
+      "name": "(완료)라즈봇 V2",
+      "pcode": "P016515116"
+    }
+  ],
+  "로보두이노 V2 (Y/15M)": [
+    {
+      "name": "(완료)로보두이노 V2",
+      "pcode": "P016515120"
+    }
+  ],
+  "ESP32 카메라 RC 카 (Y/1M)": [
+    {
+      "name": "(완료)ESP32 카메라 RC 카",
+      "pcode": "P016072919"
+    }
+  ],
+  "(단종)비트독 Xgo V1 (Y/6M)": [
+    {
+      "name": "비트독 Xgo",
+      "pcode": "P013743081"
+    }
+  ],
+  "비트독 Xgo V2 (Y/60M)": [
+    {
+      "name": "비트독 Xgo V2",
+      "pcode": "P015230684"
+    }
+  ],
+  "XGO 라이더 (Y/2M)": [
+    {
+      "name": "(완료)XGO 라이더",
+      "pcode": "P016515110"
+    }
+  ],
+  "ESP32 로봇암 (Y/5M)": [
+    {
+      "name": "(완료)ESP32 로봇암",
+      "pcode": "P016819261"
+    }
+  ],
+  "도프봇 (Y/6M)": [
+    {
+      "name": "도프봇",
+      "pcode": "P012114002"
+    },
+    {
+      "name": "Yahboom DOFBOT AI Vision Robotic Arm with ROS for Jetson NANO 4GB B01 (with Jetson Nano)",
+      "pcode": "P013158512"
+    }
+  ],
+  "(단종예정)젯봇 (Y/12M)": [
+    {
+      "name": "젯봇",
+      "pcode": "P010271225"
+    },
+    {
+      "name": "Yahboom Jetbot AI robot (without Jetson Nano)-Advanced (with book)",
+      "pcode": "P012409421"
+    },
+    {
+      "name": "Yahboom Jetbot AI robot (with Jetson Nano,book)-Advanced",
+      "pcode": "P012409431"
+    }
+  ],
+  "(단종예정)젯봇미니 (Y/3M)": [
+    {
+      "name": "젯봇미니",
+      "pcode": "P013035379"
+    }
+  ],
+  "로스마스터 (Y/5M)": [
+    {
+      "name": "로스마스터",
+      "pcode": "P015725054"
+    }
+  ],
+  "(단종예정)트랜스봇 (Y/3M)": [
+    {
+      "name": "트랜스봇",
+      "pcode": "P014858002"
+    }
+  ],
+  "레트로 아케이드 (Y/150M)": [
+    {
+      "name": "레트로 아케이드",
+      "pcode": "P014920585"
+    },
+    {
+      "name": "레트로 아케이드 + 교재",
+      "pcode": "P016072344"
+    }
+  ],
+  "레트로 아케이드 Pro (Y/M)": [
+    {
+      "name": "(신규)레트로 아케이드 V2",
+      "pcode": "P016880355"
+    }
+  ],
+  "아두이노와 블록코딩으로 게임 만들기 키트 (Y/3M)": [
+    {
+      "name": "아두이노와 블록코딩으로 게임 만들기 키트",
+      "pcode": "P014753490"
+    }
+  ],
+  "허스키렌즈 (Y/80M)": [
+    {
+      "name": "허스키렌즈",
+      "pcode": "P010372732"
+    },
+    {
+      "name": "micro:Maqueen Plus with HUSKYLENS, MBT0021-EN",
+      "pcode": "P011445321"
+    },
+    {
+      "name": "허스키렌즈 키트(실리콘 케이스 포함)",
+      "pcode": "P011850717"
+    },
+    {
+      "name": "Gravity: HUSKYLENS - An Easy-to-use AI Vision Sensor(with book)",
+      "pcode": "P012114179"
+    },
+    {
+      "name": "Micro: Maqueen micro:bit Robot Platform[ROB0148] (with Huskylens,microbit V2.2, book)",
+      "pcode": "P013148935"
+    },
+    {
+      "name": "Gravity: HUSKYLENS - An Easy-to-use AI Vision Sensor(with micro:bit V2.2, book)",
+      "pcode": "P013148936"
+    },
+    {
+      "name": "micro:Maqueen Plus with HUSKYLENS and micro:bit [MBT0021-EN-2]",
+      "pcode": "P013148944"
+    },
+    {
+      "name": "micro:Maqueen Plus V2 (18650 Battery) with HUSKYLENS and micro:bit V2",
+      "pcode": "P013466529"
+    }
+  ],
+  "음성 인식 모듈 (Y/4M)": [
+    {
+      "name": "음성 인식 모듈",
+      "pcode": "P015403098"
+    }
+  ],
+  "스마트 AI 렌즈 (Y/3M)": [
+    {
+      "name": "스마트 AI 렌즈",
+      "pcode": "P012113989"
+    }
+  ],
+  "허스키렌즈2 (Y/M)": [
+    {
+      "name": "(완료)허스키렌즈2",
+      "pcode": "P016831480"
+    }
+  ],
+  "라즈베리파이 홈 IoT 키트 (Y/1M)": [
+    {
+      "name": "라즈베리파이 홈 IoT 키트",
+      "pcode": "P013723143"
+    },
+    {
+      "name": "라즈베리로 만드는 홈 IoT키트 + 교재",
+      "pcode": "P014001919"
+    }
+  ],
+  "마이크로비트 IPS 컬러 LCD (Y/4M)": [
+    {
+      "name": "(신규/출시완료)마이크로비트 IPS 컬러 LCD",
+      "pcode": "P016499186"
+    }
+  ],
+  "RC카 축구 확장 패키지 (Y/5M)": [
+    {
+      "name": "RC카 축구 확장 패키지",
+      "pcode": "P016370458"
+    }
+  ],
+  "마이크로비트 웨어러블 (Y/7M)": [
+    {
+      "name": "마이크로비트 웨어러블",
+      "pcode": "P016426183"
+    }
+  ],
+  "링비트카 악세서리 키트 (Y/1M)": [
+    {
+      "name": "링비트카 악세서리 키트",
+      "pcode": "P009436729"
+    }
+  ],
+  "TPBot 악세서리 키트 (Y/1M)": [
+    {
+      "name": "TPBot 악세서리 키트",
+      "pcode": "P013465080"
+    }
+  ],
+  "TPBot 과학 및 기술 팩 (Y/1M)": [
+    {
+      "name": "ELECFREAKS TPBot 과학 및 기술 팩",
+      "pcode": "P016185440"
+    }
+  ],
+  "Elecfreaks 조이스틱 비트 (Y/7M)": [
+    {
+      "name": "Elecfreaks 조이스틱 비트",
+      "pcode": "P013465100"
+    }
+  ],
+  "마이크로비트 스마트 시계 키트 V2 (Y/6M)": [
+    {
+      "name": "(완료)마이크로비트 스마트 시계 키트 V2",
+      "pcode": "P016611636"
+    }
+  ],
+  "젯슨오린 나노 슈퍼 개발자 키트 (Y/30M)": [
+    {
+      "name": "젯슨오린 나노 슈퍼 개발자 키트(MDS테크)",
+      "pcode": "P016577220"
+    },
+    {
+      "name": "젯슨오린 나노 슈퍼 개발자 호환 키트",
+      "pcode": "P016634648"
+    }
+  ],
+  "야붐 젯슨 B01 (Y/30M)": [
+    {
+      "name": "엔비디아 젯슨나노 개발자 키트 B01",
+      "pcode": "P016352086"
+    },
+    {
+      "name": "엔비디아 젯슨나노 개발자 키트 B01",
+      "pcode": "P009401865"
+    },
+    {
+      "name": "엔비디아 젯슨나노 개발자 키트 B01",
+      "pcode": "P016207345"
+    }
+  ],
+  "젯슨 토르 (Y/100M)": [
+    {
+      "name": "젯슨 토르",
+      "pcode": "P016786968"
+    }
+  ],
+  "NTN305 (Y/2M)": [
+    {
+      "name": "NTN305",
+      "pcode": "P016608167"
+    }
+  ],
+  "NT3588 (Y/2M)": [
+    {
+      "name": "NT3588",
+      "pcode": "P016608166"
+    }
+  ]
+}
